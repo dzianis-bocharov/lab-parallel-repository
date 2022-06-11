@@ -14,26 +14,11 @@
                 array_push($the_only_class_return, $result);
             }
         };
-
         if (count($the_only_class_return)==1) {
              return $the_only_class_return[0];
         }
         else {
              return 'Error!';
         };
-
-// //---------- номер для начальной строки
-
-//         echo '<br>'.'----------' . '<br>';
-
-//         echo 'начальная строка - #1' . '<br>';
-
-// //---------- номер для конечной строки
-
-//         echo '----------' . '<br>';
-
-//         echo 'конечная строка - #500' . '<br>';
-
     };
-
 ?>
