@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+		<link rel="stylesheet" type="text/css" href="../../style1.css">
+		<link rel='shortcut icon' href='favicon.ico' type='image/ico'>
+		<script type='text/javascript' src='jQuery.js'></script>
+		<script type='text/javascript' src='jquery.validate.js'></script>
+		<script type='text/javascript' src='jquery.validate.password.js'></script>
+		<script type='text/javascript'>
+			$(document).ready(function(){
+				$('#signup_form').validate({
+					rules: {
+						password: {
+							minlength:6
+						},
+						confirm_password: {
+							minlength:6,
+							equalTo:'#password'
+						} 
+					},
+					messages: {
+						password: {
+							minlength: 'Пароль должен иметь не менее 6 символов.'
+						},
+						confirm_password: {
+							minlength: 'Пароль должен иметь не менее 6 символов',
+							equalTo: 'Ваши пароли не совпадают. Думай!!!'
+						}
+					}
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Введите сведения для регистрации <br> нового пользователя</h1>
+		<form action = 'create_user.php' enctype = 'multipart/form-data' method = 'POST' id='signup_form'>
+			<fieldset style='width:50%'>
+				<label for="first_name">Имя:</label>
+				<input type="text" name="first_name" size="20" class='required' /><br /> 
+				<label for="last_name">Фамилия:</label> 
+				<input type="text" name="last_name" size="20" class='required'/><br /> 
+				<label for="email">Адрес электронной почты:</label> 
+				<input type="text" name="email" size="50" class='required email'/><br /> 
+				<label for="facebook_url">URL-адрес в Facebook:</label> 
+				<input type="text" name="facebook_url" size="50" /><br /> 
+				<label for="twitter_handle">Идентификатор в Twitter:</label> 
+				<input type="text" name="twitter_handle" size="20" /><br /> 
+				<label for="username">Имя пользователя:</label> 
+				<input type="text" name="username" size="20" /><br /> 
+				<label for="password">Пароль:</label> 
+				<input type="password" id='password' name="password" size="20" class='required password'/><br /> 
+				<div class='password-meter'>
+					<div class='pasword-meter-message'></div>
+					<div class='password-meter-bg'>
+						<div class='password-meter-bar'></div>
+					</div>
+				</div>
+				<label for='confirm password'>Подтверждение пароля</label>
+				<input type='password' id='confirm_password' name='confirm_password' size='20' class='required'>
+				<br>
+				<label for="user_pic">Отправка изображения:</label> 
+				<input type="file" name="user_pic" size="30" /> 
+				<br>
+				<label for="bio">Биография:</label> 
+				<br>
+				<textarea name="bio" cols="40" rows=10"></textarea>
+			</fieldset>
+			<fieldset style='width:50%'>
+				<input type="submit" value="Вступить в клуб" /> 
+				<input type="reset" value="Очистить и начать все сначала" /> 
+			</fieldset></form>
+	</body>
+</html>

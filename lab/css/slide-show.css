@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+div#slideShowContainer {
+    border: solid 2px blue;
+    position: relative;
+    height: 240px;
+    width: 350px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+div#slideMover {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 350px;
+}
+div#slidesWrapper {
+    position: absolute;
+    display: flex;
+}
+div.slideElement {
+    height: 240px;
+    border: 2px solid aqua; 
+    padding-top: 7px;
+    width: 350px;
+    display: inline-block;
+}
+div#controls {
+    position: absolute;
+    width: 120px;
+    bottom: 5px;
+    left: calc(50% - 60px); 
+    text-align: center;
+}
+span.sliderPages {
+    color: lime;
+}
+div#pagesInfo {
+    width: 50px;
+    display: inline-block;
+}

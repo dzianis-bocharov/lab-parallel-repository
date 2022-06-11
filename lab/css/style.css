@@ -1,0 +1,66 @@
+body {
+    background-color: grey;
+    line-height: normal;
+    font-family: TimesNewRoman;
+}
+h1 {
+    color: white;
+    font-weight: bold;
+}
+button, div, img {
+    border-style: none;
+    /* border-radius: 5px; */
+}
+button.lab1  {
+    font-size: 16px;
+    width: 300px;
+    height: 55px;
+    margin: 5px;
+}
+body {font-size: 18px}
+div#duck1 {
+    color: white;
+    height: 35px;
+    width: 200px;
+    border: solid 2px white;
+}
+#can1 {
+    width: 960px;
+}
+@media only screen and (max-width: 1000px) {
+     h1 {
+         font-size: 100px;
+     }
+     button.lab1 {
+         font-size: 45px;
+         width: 700px;
+         height: 140px;
+     }
+     body {
+         font-size: 50px;
+     }
+     div#duck123 {
+         height: 70px;
+         width: 400px;
+         padding: 10px;
+     }
+ }
+img#dick {
+    width:400px;
+    float: left;
+}
+/*#xyz1 {
+    width: 500px;
+}*/
+#xyz2 {
+    margin-top: -5px;
+};
+/*a:link {
+      color: green;
+}
+a:visited {
+      color: blue;
+}
+a:hover {
+      color: blue;
+}*/

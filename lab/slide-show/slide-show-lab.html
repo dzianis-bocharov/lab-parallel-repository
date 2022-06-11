@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<body>
+	<head>
+		<meta charset="utf-8">
+		<!-- <link rel='shortcut icon' type='image/ico' href='favicon-lab.ico?v=1'> -->
+		<style>
+			div#main-container {
+				width: 960px;
+				height: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+			a {
+				color: #0000EE;
+				text-decoration: underline;
+				display: block;
+				margin-left: -25px;
+			}
+			div#slideshow-container {
+				border: 2px solid blue;
+				width: 350px;
+				height: 240px;
+				overflow: hidden;
+			}
+			div.slides {
+				display: none;
+				border: 2px solid white;
+				width: 346px;
+				height: 236px;
+				position: absolute;
+				/*   left: 102% */
+			}
+			div#slideshow-container {
+				position: relative;
+				background-color: grey;
+				color: white;
+				font-size: 18px;  
+				margin: 200px auto 10px auto;  
+			}
+			div#slideshow-controls {
+				width: 110px;
+				height: 20px;
+				position: absolute;
+				bottom: 4px;
+				text-align: center;
+				left: 50%;
+				margin-left: -55px;
+			}
+			span.limeChar {
+				color: lime;
+			}
+			button.controls-btn {
+				position: relative;
+				bottom: 2px;
+			}
+		</style>
+		<link rel="stylesheet" href="../../reset.css">
+		<script src='my-slide-show.js'></script>
+		<!-- <script src="jquery-3.2.1.min"></script> -->
+	</head>
+
+	<body>
+		<div id = 'main-container'>
+			<div id='slideshow-container'>
+				<div class='slides'>Slide1</div>
+				<div class='slides'>Slide2</div>
+				<div class='slides'>Slide3</div>
+				<div id=slideshow-controls>
+				<button id='previous' class='controls-btn'>&#60;</button>
+				<span><span class='limeChar'>1</span> из <span class='limeChar'>3</span></span>
+				<button id='next' class='controls-btn'>&#62;</button>
+				</div>
+			</div>
+			<!-- <a id='a1' href='../MainPage.php'>Навигация /// Lab / Home</a> -->
+		</div>
+	</body>
+</html>

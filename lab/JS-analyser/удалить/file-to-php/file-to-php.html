@@ -1,0 +1,29 @@
+<meta charset='utf-8'>
+<script src='jquery.js'></script>
+<script>
+    $(document).ready(() => {
+        $('.submit').on('click', (event) => {
+            event.preventDefault();
+            var file_data = new FormData();
+            var files = $('#file')[0].files[0];
+            file_data.append('file',files);
+
+            $.ajax({
+                url: 'file-to-php.php',
+                type: 'POST',
+                data: file_data,
+                contentType: false,
+                processData: false,
+                success: function(response){
+                   $(".message").html(response);
+                }
+            });
+        });
+    });
+</script>
+<form>
+    <input id='file' type='file'>
+    <br>
+    <input class='submit' type='submit'>
+</form>
+<div class="message"></div>
